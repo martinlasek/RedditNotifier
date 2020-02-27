@@ -38,7 +38,7 @@ class UserController {
     res.send(result)
   }
 
-  // Returns user based on its username.
+  // Returns user based on his id.
   // - userId is required.
   find = (req, res) => {
     let userId = Number(req.params.userId)
@@ -86,7 +86,7 @@ class UserController {
   // MARK: - Subreddit
 
   // Create a new subreddit.
-  // - Required: name, userId.
+  // A user can only have one subreddit with the same name.
   addSubreddit = (req, res) => {
     let subreddit
 
